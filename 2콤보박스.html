@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MIXER</title>
+    <style>
+        body{
+            border: 0;
+            padding: 0;
+            background-image: url("./images/testinput2.png");
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            background-size: cover;
+            height : 100vh
+
+        }
+    </style>
+
+<script language="JavaScript">
+    Array.prototype.get = function(index)
+    {
+        return this[index];
+    }
+
+    Array.prototype.set = function(object)
+    {
+        this[this.length] = object;
+    }
+
+    Coditech = new Object();
+    Coditech.Version="1.0.0.0";
+    Coditech.Framework = new Object();
+
+
+
+    Coditech.Framework.Category = function(name,value)
+    {
+        var _name = name;
+        var _value = value;
+        var _subcategory = new Array();
+
+
+
+        this.getName = function(){return _name;}
+        this.getValue = function(){ return _value;}
+        this.add = function(name,value)
+        {
+            _subcategory.set(new Coditech.Framework.Category(name,value));
+        }
+
+
+
+        this.get = function(index)
+        {
+            return _subcategory.get(index);
+        }
+
+
+        this.length = function(){ return _subcategory.length;}
+    }
+
+
+
+    function addCategory(category,name,value)
+    {
+        category.add(name,value);
+    }
+
+
+
+    ROOT_CATEGORY_NODE = new Coditech.Framework.Category("ROOT","");
+    addCategory(ROOT_CATEGORY_NODE,"CATE_0","-곡 선택-");
+    addCategory(ROOT_CATEGORY_NODE,"CATE_1","터키 행진곡");
+    addCategory(ROOT_CATEGORY_NODE,"CATE_2","월광 소나타");
+    addCategory(ROOT_CATEGORY_NODE,"CATE_3","엘리제를 위하여");
+    addCategory(ROOT_CATEGORY_NODE,"CATE_4","흑건");
+    addCategory(ROOT_CATEGORY_NODE,"CATE_5","왕벌의 비행");
+    addCategory(ROOT_CATEGORY_NODE,"CATE_6","사계 - 겨울");
+
+    addCategory(ROOT_CATEGORY_NODE.get(0),"CATE_0_0","-섞을 곡 선택-");
+
+    addCategory(ROOT_CATEGORY_NODE.get(1),"CATE_0_0","-섞을 곡 선택-");
+    addCategory(ROOT_CATEGORY_NODE.get(1),"CATE_0_2","월광 소나타");
+    addCategory(ROOT_CATEGORY_NODE.get(1),"CATE_0_3","엘리제를 위하여");
+    addCategory(ROOT_CATEGORY_NODE.get(1),"CATE_0_4","흑건");
+    addCategory(ROOT_CATEGORY_NODE.get(1),"CATE_0_5","왕벌의 비행");
+    addCategory(ROOT_CATEGORY_NODE.get(1),"CATE_0_6","사계 - 겨울");
+
+    addCategory(ROOT_CATEGORY_NODE.get(2),"CATE_1_0","-섞을 곡 선택-");
+    addCategory(ROOT_CATEGORY_NODE.get(2),"CATE_1_1","터키 행진곡");
+    addCategory(ROOT_CATEGORY_NODE.get(2),"CATE_1_2","엘리제를 위하여");
+    addCategory(ROOT_CATEGORY_NODE.get(2),"CATE_1_4","흑건");
+    addCategory(ROOT_CATEGORY_NODE.get(2),"CATE_1_5","왕벌의 비행");
+    addCategory(ROOT_CATEGORY_NODE.get(2),"CATE_1_6","사계 - 겨울");
+
+
+    addCategory(ROOT_CATEGORY_NODE.get(3),"CATE_2_0","-섞을 곡 선택-");
+    addCategory(ROOT_CATEGORY_NODE.get(3),"CATE_2_1","터키 행진곡");
+    addCategory(ROOT_CATEGORY_NODE.get(3),"CATE_2_2","월광 소나타");
+    addCategory(ROOT_CATEGORY_NODE.get(3),"CATE_2_4","흑건");
+    addCategory(ROOT_CATEGORY_NODE.get(3),"CATE_2_5","왕벌의 비행");
+    addCategory(ROOT_CATEGORY_NODE.get(3),"CATE_2_6","사계 - 겨울");
+
+    addCategory(ROOT_CATEGORY_NODE.get(4),"CATE_3_0","-섞을 곡 선택-");
+    addCategory(ROOT_CATEGORY_NODE.get(4),"CATE_3_1","터키 행진곡");
+    addCategory(ROOT_CATEGORY_NODE.get(4),"CATE_3_2","월광 소나타");
+    addCategory(ROOT_CATEGORY_NODE.get(4),"CATE_3_3","엘리제를 위하여");
+    addCategory(ROOT_CATEGORY_NODE.get(4),"CATE_3_5","왕벌의 비행");
+    addCategory(ROOT_CATEGORY_NODE.get(4),"CATE_3_6","사계 - 겨울");
+
+    addCategory(ROOT_CATEGORY_NODE.get(5),"CATE_4_0","-섞을 곡 선택-");
+    addCategory(ROOT_CATEGORY_NODE.get(5),"CATE_4_1","터키 행진곡");
+    addCategory(ROOT_CATEGORY_NODE.get(5),"CATE_4_2","월광 소나타");
+    addCategory(ROOT_CATEGORY_NODE.get(5),"CATE_4_3","엘리제를 위하여");
+    addCategory(ROOT_CATEGORY_NODE.get(5),"CATE_4_4","흑건");
+    addCategory(ROOT_CATEGORY_NODE.get(5),"CATE_4_6","사계 - 겨울");
+
+    addCategory(ROOT_CATEGORY_NODE.get(6),"CATE_5_0","-섞을 곡 선택-");
+    addCategory(ROOT_CATEGORY_NODE.get(6),"CATE_5_1","터키 행진곡");
+    addCategory(ROOT_CATEGORY_NODE.get(6),"CATE_5_2","월광 소나타");
+    addCategory(ROOT_CATEGORY_NODE.get(6),"CATE_5_3","엘리제를 위하여");
+    addCategory(ROOT_CATEGORY_NODE.get(6),"CATE_5_4","흑건");
+    addCategory(ROOT_CATEGORY_NODE.get(6),"CATE_5_5","왕벌의 비행");
+
+    function initialize()
+    {
+        var defaultForm = document.getElementById("defaultForm");
+        if (null != defaultForm)
+        {
+            createOption(defaultForm.color, ROOT_CATEGORY_NODE);
+            createOption(defaultForm.size, ROOT_CATEGORY_NODE.get(0));
+            createOption(defaultForm.test, ROOT_CATEGORY_NODE.get(0).get(0));
+        }
+    }
+    function clearSelectBox(selectBox)
+    {
+        if (null == selectBox || null == selectBox.options){
+            return;
+        }
+        var length = selectBox.options.length;
+        for (var index=0;index<length ;index++){ selectBox.options.remove(0); }
+    }
+
+    function createOption(selectBox,category)
+    {
+        if (null == category) return;
+
+        clearSelectBox(selectBox);
+
+        for (var index=0;index<category.length(); index++)
+        {
+            var c = category.get(index);
+            var option = new Option();
+
+            option.value = c.getName();
+            option.text = c.getValue();
+
+            selectBox.options.add(option);
+        }
+    }
+
+    function changeSubject(form)
+    {
+        var category = ROOT_CATEGORY_NODE.get(form.color.selectedIndex);
+        if (null != category)
+        {
+            createOption(form.size,category);
+            createOption(form.test,category.get(0));
+        }
+    }
+
+    function changeContents(form)
+    {
+        var category = null;
+
+        category =ROOT_CATEGORY_NODE.get(form.color.selectedIndex);
+        category = category.get(form.size.selectedIndex);
+
+        if (null != category){
+            createOption(form.test,category);
+        }
+    }
+
+    window.onload = initialize;
+</script>
+
+</HEAD>
+
+
+
+<body>
+
+<form name="form1" id="defaultForm" method="post" >
+    <select name="color" onchange="changeSubject(this.form)">
+
+    </select>
+    <select name="size" onchange="changeContents(this.form)">
+
+    </select>
+    <input type="submit">
+</form>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MIXER</title>
+
+    <style>
+        body{
+            border: 0;
+            padding: 0;
+            background-image: url("./images/testinput2.png");
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            background-size: cover;
+            height : 100vh
+
+        }
+        select {
+            width: 200px;
+            padding: .8em .5em;
+            border: 1px solid #999;
+            font-family: Sans-Serif;
+            background: url('./images/box.png') no-repeat 95% 50%;
+            border-radius: 0px;
+            position: absolute;
+            top: 425px;left: 860px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+
+        select::-ms-expand {
+            display: none;
+        }
+
+        input{}
+        #in1{position: absolute; top: 500px;left: 565px;}
+        #in2{position: absolute; top: 625px;left: 565px;}
+        #in3{position: absolute; top: 750px;left: 565px;}
+        #in4{position: absolute; top: 500px;left: 1000px;}
+        #in5{position: absolute; top: 625px;left: 997px;}
+        #in6{position: absolute; top: 750px;left: 1000px;}
+    </style>
+</head>
+<body>
+<select name="job" id="job">
+    <option value="">섞을 곡 선택</option>
+    <option value="a">터키행진곡</option>
+    <option value="b">월광 소나타</option>
+    <option value="c">엘리제를 위하여</option>
+    <option value="d">흑건</option>
+    <option value="e">왕벌의 비행</option>
+    <option value="f">사계 - 겨울</option>
+</select>
+<input type="image" value="put1" onclick="Change1()" src="images/inp1.png" id="in1"/>
+<script>
+    var target = document.getElementById("job");
+    function Change1(){
+       if(target.value == "a"){
+           location.href = "./터-터.html"
+       }
+       else if(target.value == "b") {
+           location.href = "./터-월.html"
+       }
+       else if(target.value == "c"){
+               location.href = "./터-엘.html"
+       }
+       else if(target.value == "d"){
+           location.href = "./터-흑.html"
+       }
+       else if(target.value == "e"){
+           location.href = "./터-왕.html"
+       }
+       else if(target.value == "f"){
+           location.href = "./터-사.html"
+       }
+    }
+</script>
+
+<input type="image" value="put2" onclick="Change2()" src="images/inp2.png" id="in2"/>
+<script>
+    var target = document.getElementById("job");
+    function Change2(){
+        if(target.value == "a"){
+            location.href = "./월-터.html"
+        }
+        else if(target.value == "b") {
+            location.href = "./월-월.html"
+        }
+        else if(target.value == "c"){
+            location.href = "./월-엘.html"
+        }
+        else if(target.value == "d"){
+            location.href = "./월-흑.html"
+        }
+        else if(target.value == "e"){
+            location.href = "./월-왕.html"
+        }
+        else if(target.value == "f"){
+            location.href = "./월-사.html"
+        }
+    }
+</script>
+
+<input type="image" value="put3" onclick="Change3()" src="images/inp3.png" id="in3"/>
+<script>
+    var target = document.getElementById("job");
+    function Change3(){
+        if(target.value == "a"){
+            location.href = "./엘-터.html"
+        }
+        else if(target.value == "b") {
+            location.href = "./엘-월.html"
+        }
+        else if(target.value == "c"){
+            location.href = "./엘-엘.html"
+        }
+        else if(target.value == "d"){
+            location.href = "./엘-흑.html"
+        }
+        else if(target.value == "e"){
+            location.href = "./엘-왕.html"
+        }
+        else if(target.value == "f"){
+            location.href = "./엘-사.html"
+        }
+    }
+</script>
+
+<input type="image" value="put4" onclick="Change4()" src="images/inp4.png" id="in4"/>
+<script>
+    var target = document.getElementById("job");
+    function Change4(){
+        if(target.value == "a"){
+            location.href = "./흑-터.html"
+        }
+        else if(target.value == "b") {
+            location.href = "./흑-월.html"
+        }
+        else if(target.value == "c"){
+            location.href = "./흑-엘.html"
+        }
+        else if(target.value == "d"){
+            location.href = "./흑-흑.html"
+        }
+        else if(target.value == "e"){
+            location.href = "./흑-왕.html"
+        }
+        else if(target.value == "f"){
+            location.href = "./흑-사.html"
+        }
+    }
+</script>
+
+<input type="image" value="put5" onclick="Change5()" src="images/inp5.png" id="in5"/>
+<script>
+    var target = document.getElementById("job");
+    function Change5(){
+        if(target.value == "a"){
+            location.href = "./왕-터.html"
+        }
+        else if(target.value == "b") {
+            location.href = "./왕-월.html"
+        }
+        else if(target.value == "c"){
+            location.href = "./왕-엘.html"
+        }
+        else if(target.value == "d"){
+            location.href = "./왕-흑.html"
+        }
+        else if(target.value == "e"){
+            location.href = "./왕-왕.html"
+        }
+        else if(target.value == "f"){
+            location.href = "./왕-사.html"
+        }
+    }
+</script>
+
+<input type="image" value="put6" onclick="Change6()" src="images/inp6.png" id="in6"/>
+<script>
+    var target = document.getElementById("job");
+    function Change6(){
+        if(target.value == "a"){
+            location.href = "./사-터.html"
+        }
+        else if(target.value == "b") {
+            location.href = "./사-월.html"
+        }
+        else if(target.value == "c"){
+            location.href = "./사-엘.html"
+        }
+        else if(target.value == "d"){
+            location.href = "./사-흑.html"
+        }
+        else if(target.value == "e"){
+            location.href = "./사-왕.html"
+        }
+        else if(target.value == "f"){
+            location.href = "./사-사.html"
+        }
+    }
+</script>
+</body>
+</html>

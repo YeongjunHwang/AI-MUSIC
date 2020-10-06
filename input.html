@@ -1,0 +1,168 @@
+<title>AI MUSIC</title>
+
+<body>
+<link rel="stylesheet" href="piano.css">
+<script language="javascript" type="text/javascript" src="input.js"></script>
+<script language="javascript" type="text/javascript" src="put1.js"></script>
+<script language="javascript" type="text/javascript" src="put2.js"></script>
+<script language="javascript" type="text/javascript" src="put3.js"></script>
+<script language="javascript" type="text/javascript" src="put4.js"></script>
+<script language="javascript" type="text/javascript" src="put5.js"></script>
+<script language="javascript" type="text/javascript" src="put6.js"></script>
+
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        position: relative;
+        background-image: url("./images/input12.png");
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+        background-size: cover;
+    }
+    span {
+        padding : 30px;
+    }
+
+    .center, canvas {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    input{}
+    #in1{position: absolute; top: 500px;left: 565px;}
+    #in2{position: absolute; top: 625px;left: 565px;}
+    #in3{position: absolute; top: 750px;left: 565px;}
+    #in4{position: absolute; top: 500px;left: 1000px;}
+    #in5{position: absolute; top: 625px;left: 997px;}
+    #in6{position: absolute; top: 750px;left: 1000px;}
+</style>
+
+<section id="wrap">
+    <header>
+        <br>
+        <h1>.</h1>
+    </header>
+    <section id="main">
+        <div class="cur"></div>
+        <div class="keys">
+            <div data-key="65" class="key" data-note="C">
+                <span class="hints">A</span>
+            </div>
+            <div data-key="87" class="key sharp" data-note="C#">
+                <span class="hints">W</span>
+            </div>
+            <div data-key="83" class="key" data-note="D">
+                <span class="hints">S</span>
+            </div>
+            <div data-key="69" class="key sharp" data-note="D#">
+                <span class="hints">E</span>
+            </div>
+            <div data-key="68" class="key" data-note="E">
+                <span class="hints">D</span>
+            </div>
+            <div data-key="70" class="key" data-note="F">
+                <span class="hints">F</span>
+            </div>
+            <div data-key="84" class="key sharp" data-note="F#">
+                <span class="hints">T</span>
+            </div>
+            <div data-key="71" class="key" data-note="G">
+                <span class="hints">G</span>
+            </div>
+            <div data-key="89" class="key sharp" data-note="G#">
+                <span class="hints">Y</span>
+            </div>
+            <div data-key="72" class="key" data-note="A">
+                <span class="hints">H</span>
+            </div>
+            <div data-key="85" class="key sharp" data-note="A#">
+                <span class="hints">U</span>
+            </div>
+            <div data-key="74" class="key" data-note="B">
+                <span class="hints">J</span>
+            </div>
+            <div data-key="75" class="key" data-note="C">
+                <span class="hints">K</span>
+            </div>
+            <div data-key="79" class="key sharp" data-note="C#">
+                <span class="hints">O</span>
+            </div>
+            <div data-key="76" class="key" data-note="D">
+                <span class="hints">L</span>
+            </div>
+            <div data-key="80" class="key sharp" data-note="D#">
+                <span class="hints">P</span>
+            </div>
+            <div data-key="186" class="key" data-note="E">
+                <span class="hints">;</span>
+            </div>
+        </div>
+        <audio data-key="65" src="./data/piano/60.mp3"></audio>
+        <audio data-key="87" src="./data/piano/61.mp3"></audio>
+        <audio data-key="83" src="./data/piano/62.mp3"></audio>
+        <audio data-key="69" src="./data/piano/63.mp3"></audio>
+        <audio data-key="68" src="./data/piano/64.mp3"></audio>
+        <audio data-key="70" src="./data/piano/65.mp3"></audio>
+        <audio data-key="84" src="./data/piano/66.mp3"></audio>
+        <audio data-key="71" src="./data/piano/67.mp3"></audio>
+        <audio data-key="89" src="./data/piano/68.mp3"></audio>
+        <audio data-key="72" src="./data/piano/69.mp3"></audio>
+        <audio data-key="85" src="./data/piano/70.mp3"></audio>
+        <audio data-key="74" src="./data/piano/71.mp3"></audio>
+        <audio data-key="75" src="./data/piano/72.mp3"></audio>
+        <audio data-key="79" src="./data/piano/73.mp3"></audio>
+        <audio data-key="76" src="./data/piano/74.mp3"></audio>
+        <audio data-key="80" src="./data/piano/75.mp3"></audio>
+        <audio data-key="186" src="./data/piano/76.mp3"></audio>
+    </section>
+</section>
+
+<input type="image" value="put1" onclick="put1()" src="images/inp1.png" id="in1"/>
+<script>
+    function put1(){
+        location.href = "put1.html?"+m;
+    }
+</script>
+
+<input type="image" value="put2" onclick="put2()" src="images/inp2.png" id="in2"/>
+<script>
+    function put2(){
+        location.href = "put2.html?"+m;
+    }
+</script>
+
+<input type="image" value="put3" onclick="put3()" src="images/inp3.png" id="in3"/>
+<script>
+    function put3(){
+        location.href = "put3.html?"+m;
+    }
+</script>
+
+<input type="image" value="put4" onclick="put4()" src="images/inp4.png" id="in4"/>
+<script>
+    function put4(){
+        location.href = "put4.html?"+m;
+    }
+</script>
+
+<input type="image" value="put5" onclick="put5()" src="images/inp5.png" id="in5"/>
+<script>
+    function put5(){
+        location.href = "put5.html?"+m;
+    }
+</script>
+
+<input type="image" value="put6" onclick="put6()" src="images/inp6.png" id="in6"/>
+<script>
+    function put6(){
+        location.href = "put6.html?"+m;
+    }
+</script>
+
+</body>
+

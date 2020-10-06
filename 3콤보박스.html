@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mixer</title>
+    <style>
+        body{
+            border: 0;
+            padding: 0;
+            background-image: url("./images/testinput2.png");
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            background-size: cover;
+            height : 100vh
+
+        }
+        select {
+            width: 200px;
+            padding: .8em .5em;
+            border: 1px solid #999;
+            font-family: Sans-Serif;
+            background: url('./images/box.png') no-repeat 95% 50%;
+            border-radius: 0px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        #mel1{position: absolute; top: 500px;left: 700px;}
+        #mel2{position: absolute; top: 500px;left: 1000px;}
+        input{}
+        #in1{position: absolute; top: 625px;left: 800px;}
+    </style>
+</head>
+<body>
+<select name="mel1" id="mel1">
+    <option value="">섞을 곡 선택</option>
+    <option value="a">터키행진곡</option>
+    <option value="b">월광 소나타</option>
+    <option value="c">엘리제를 위하여</option>
+    <option value="d">흑건</option>
+    <option value="e">왕벌의 비행</option>
+    <option value="f">사계 - 겨울</option>
+</select>
+<select name="mel2" id="mel2">
+    <option value="">섞을 곡 선택</option>
+    <option value="a">터키행진곡</option>
+    <option value="b">월광 소나타</option>
+    <option value="c">엘리제를 위하여</option>
+    <option value="d">흑건</option>
+    <option value="e">왕벌의 비행</option>
+    <option value="f">사계 - 겨울</option>
+</select>
+</body>
+<input type="image" value="put1" onclick="mix()" src="images/mixbut.png" id="in1"/>
+<script>
+    var target1 = document.getElementById("mel1");
+    var target2 = document.getElementById("mel2");
+    function mix(){
+        location.href = "Allnotes.html?"+target1.value+"?"+target2.value;
+    }
+</script>
+</html>
